@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Informa ao navegador que estamos usando HTML5 -->
+<html lang="pt-br">
+
+<head>
+
+    <!-- Permite utilizar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!--
+        Faz a página se adaptar ao tamanho da tela,
+        como celular, tablet e computador.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Consulta CEP</title>
+
+    <!-- Conecta o arquivo CSS ao HTML -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!--
+            Caixa principal da consulta.
+            A classe "box" será utilizada pelo CSS
+            para definir aparência, tamanho, cor etc.
+        -->
+        <section class="box">
+
+            <!-- Título principal da página -->
+            <h1>Consulta CEP</h1>
+
+            <!--
+                Formulário que recebe os dados do usuário.
+
+                id="formConsulta":
+                permite que o JavaScript encontre
+                esse formulário.
+            -->
+            <form id="formConsulta">
+
+                <!--
+                    Texto que identifica o campo de CEP.
+
+                    for="cep":
+                    conecta o label ao input que possui
+                    id="cep".
+                -->
+                <label for="cep">CEP</label>
+
+                <!--
+                    Campo onde o usuário digita o CEP.
+
+                    id="cep":
+                    permite que o JavaScript encontre o campo.
+
+                    type="text":
+                    define o campo como texto.
+
+                    inputmode="numeric":
+                    sugere um teclado numérico em celulares.
+
+                    maxlength="9":
+                    permite no máximo 9 caracteres,
+                    contando o hífen.
+
+                    placeholder:
+                    mostra um exemplo antes de o usuário digitar.
+
+                    required:
+                    impede o envio do formulário
+                    se o campo estiver vazio.
+                -->
+                <input
+                    id="cep"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="9"
+                    placeholder="01001-000"
+                    required
+                >
+
+                <!-- Label do campo de cidade -->
+                <label for="cidade">Cidade</label>
+
+                <!--
+                    Campo onde o usuário informa a cidade.
+
+                    id="cidade":
+                    permite que o JavaScript encontre o campo.
+
+                    placeholder:
+                    mostra um exemplo de cidade.
+
+                    required:
+                    torna o preenchimento obrigatório.
+                -->
+                <input
+                    id="cidade"
+                    type="text"
+                    placeholder="São Paulo"
+                    required
+                >
+
+                <!--
+                    Botão responsável por enviar o formulário.
+
+                    type="submit":
+                    informa que o botão envia o formulário.
+                -->
+                <button type="submit">
+                    Consultar Endereço
+                </button>
+
+            </form>
+
+            <!--
+                Área onde o JavaScript poderá mostrar
+                mensagens para o usuário.
+
+                id="mensagem":
+                permite que o JavaScript encontre esse elemento.
+
+                role="status":
+                indica que o elemento apresenta uma mensagem
+                de status.
+
+                aria-live="polite":
+                ajuda tecnologias assistivas a perceberem
+                quando a mensagem for alterada.
+            -->
+            <p
+                id="mensagem"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+    </main>
+
+    <!--
+        Conecta o arquivo JavaScript responsável
+        pela lógica da página inicial.
+    -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

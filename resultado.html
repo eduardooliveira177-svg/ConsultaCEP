@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!-- Define que o documento utiliza HTML5 -->
+<html lang="pt-br">
+
+<head>
+    <!-- Permite utilizar caracteres especiais, como ç e acentos -->
+    <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Resultado da Consulta</title>
+
+    <!-- Conecta o arquivo CSS à página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+
+        <!--
+            Caixa principal do resultado.
+            A classe "container" será estilizada pelo CSS.
+        -->
+        <section class="container">
+
+            <!--
+                Caixa interna.
+                Serve para organizar os elementos
+                que ficam dentro do container.
+            -->
+            <div class="container-box">
+
+                <!-- Título da página -->
+                <h1>Resultado da consulta</h1>
+
+                <!--
+                    Local onde o JavaScript vai colocar
+                    as informações do endereço.
+
+                    id="resultado":
+                    permite que o JavaScript encontre esse elemento.
+
+                    role="status":
+                    informa que esse elemento apresenta
+                    informações de status para o usuário.
+
+                    aria-live="polite":
+                    permite que leitores de tela percebam
+                    quando o conteúdo for atualizado.
+                -->
+                <div id="resultado" role="status" aria-live="polite"></div>
+
+                <!--
+                    Link para abrir o endereço no Google Maps.
+
+                    id="linkMaps":
+                    permite que o JavaScript encontre o link.
+
+                    hidden:
+                    deixa o link escondido inicialmente.
+                    O JavaScript poderá mostrar depois
+                    que a consulta for válida.
+
+                    target="_blank":
+                    abre o Google Maps em uma nova aba.
+
+                    rel="noopener noreferrer":
+                    adiciona segurança ao abrir uma página
+                    externa em uma nova aba.
+                -->
+                <a id="linkMaps"
+                   hidden
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Abrir no Google Maps
+                </a>
+
+                <!--
+                    Link para voltar à página inicial
+                    e realizar uma nova consulta.
+                -->
+                <p>
+                    <a href="index.html">Fazer nova consulta</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--
+        Conecta o arquivo JavaScript responsável
+        pela consulta e apresentação do endereço.
+    -->
+    <script src="resultado.js"></script>
+
+</body>
+</html>

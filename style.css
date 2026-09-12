@@ -1,0 +1,249 @@
+/* O seletor * seleciona TODOS os elementos da página */
+* {
+    /* Remove o espaçamento interno padrão dos elementos */
+    padding: 0;
+
+    /* Remove a margem padrão dos elementos */
+    margin: 0;
+
+    /* Faz width e height incluírem padding e border */
+    box-sizing: border-box;
+
+    /* Define Arial como fonte principal */
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Estilização do corpo da página */
+body {
+    /* Define a cor de fundo da página */
+    background-color: #838181;
+}
+
+
+/* Caixa principal da página de consulta */
+.box {
+    /* A largura será 30% da largura do elemento pai */
+    width: 30%;
+
+    /* Define uma altura fixa de 350px */
+    height: 350px;
+
+    /* 
+       20px de margem em cima e embaixo.
+       auto nas laterais centraliza a caixa horizontalmente.
+    */
+    margin: 20px auto;
+
+    /* Cor de fundo azul */
+    background-color: #0066ff;
+
+    /* Arredonda os cantos da caixa */
+    border-radius: 10px;
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Centraliza os elementos horizontalmente */
+    justify-content: center;
+
+    /* Centraliza os elementos verticalmente */
+    align-items: center;
+
+    /* Coloca os elementos um abaixo do outro */
+    flex-direction: column;
+
+    /* Cria uma sombra branca ao redor da caixa */
+    box-shadow: 3px 5px 1px #fff;
+
+}
+
+
+/* Formulário de consulta */
+#formConsulta {
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Centraliza os elementos no eixo principal */
+    justify-content: center;
+
+    /* Centraliza os elementos no eixo secundário */
+    align-items: center;
+
+    /* Coloca os elementos em coluna */
+    flex-direction: column;
+
+    /* Cria 10px de espaço entre os elementos */
+    gap: 10px;
+}
+
+
+/* Estiliza o título e os labels */
+h1,
+label {
+    /* Centraliza o texto */
+    text-align: center;
+
+    /* Deixa o texto branco */
+    color: #fff;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Cria 5px de espaço abaixo */
+    margin-bottom: 5px;
+}
+
+
+/* Estilização dos campos de entrada */
+input {
+    /* 
+       Cria 15px de espaço interno
+       dentro do input.
+    */
+    padding: 15px;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+
+    /* Cria uma borda preta de 1px */
+    border: 1px solid #000;
+
+    /* Define a cor do contorno quando o input recebe foco */
+    outline-color: #0095ff;
+}
+
+
+/* Estilização do botão */
+button {
+    /* 
+       15px em cima/baixo
+       20px nas laterais
+    */
+    padding: 15px 20px;
+
+    /* Arredonda os cantos */
+    border-radius: 10px;
+
+    /* Remove a borda padrão */
+    border: none;
+
+    /* Define o fundo azul */
+    background-color: #0000ff;
+
+    /* Define o texto como branco */
+    color: #fff;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Faz o mouse virar uma mão ao passar sobre o botão */
+    cursor: pointer;
+
+    /* Define uma transição de 0.5 segundos */
+    transition: 0.5s;
+}
+
+
+/* Estilo aplicado quando o mouse passa sobre o botão */
+button:hover {
+    /* Aumenta o botão em 5% */
+    transform: scale(1.05);
+}
+
+
+/* Mensagem de validação/erro */
+#mensagem {
+    /* Define a cor do texto como preta */
+    color: #000;
+
+    /* Cria 20px de espaço acima */
+    margin-top: 20px;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+}
+
+
+/* 
+   Caixa usada na página de resultado
+   (parecida com a .box)
+*/
+.container {
+    /* Define a largura como 30% do elemento pai */
+    width: 30%;
+
+    /* Define altura fixa de 350px */
+    height: 350px;
+
+    /* Centraliza horizontalmente */
+    margin: 20px auto;
+
+    /* Fundo azul */
+    background-color: #0066ff;
+
+    /* Cantos arredondados */
+    border-radius: 10px;
+
+    /* Ativa Flexbox */
+    display: flex;
+
+    /* Centraliza horizontalmente */
+    justify-content: center;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* Organiza os elementos em coluna */
+    flex-direction: column;
+
+    /* Adiciona sombra branca */
+    box-shadow: 3px 5px 1px #fff;
+
+    /* Define um espaçamento interno de 15px no elemento */
+     padding: 15px;
+}
+
+
+/* 
+   Caixa interna do resultado
+*/
+.container-box {
+    /* Ativa Flexbox */
+    display: flex;
+
+    /* Centraliza os elementos */
+    justify-content: center;
+
+    /* Centraliza os elementos */
+    align-items: center;
+
+    /* Organiza os elementos em coluna */
+    flex-direction: column;
+}
+
+
+/* Estiliza todos os elementos <p> */
+p {
+    /* Deixa o texto branco */
+    color: #fff;
+
+    /* Centraliza o texto */
+    text-align: center;
+}
+
+
+/* Estiliza todos os links <a> */
+a {
+    /* Deixa o link branco */
+    color: #fff;
+
+    /* Deixa o texto em negrito */
+    font-weight: bold;
+
+    /* Cria 20px de margem acima */
+    margin-top: 20px;
+
+    /* Cria 10px de margem abaixo */
+    margin-bottom: 10px;
+}
